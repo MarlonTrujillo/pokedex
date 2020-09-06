@@ -68,17 +68,16 @@ function createCard(types, name, imageUrl) {
 }
 
 function createAllCards(pokemonList) {
+    console.log(pokemonList[0]);
     pokemonList.forEach(function (pokemon) {
-        console.log(pokemon);
         let types = []
-        let imageUrl = pokemon.sprites.front_default;
+        let imageUrl = pokemon.sprites.other.dream_world.front_default;
         let name = pokemon.name;
         pokemon.types.forEach(function (typeObject) {
             types.push(typeObject.type.name);
         });
 
         cache.cardColumns.appendChild(createCard(types, name, imageUrl))
-        console.log(createCard(types, name, imageUrl));
     })
 }
 

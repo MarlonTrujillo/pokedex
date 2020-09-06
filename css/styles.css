@@ -32,3 +32,8 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.card-img-top {
+    height: 15rem;
+    padding: 10%
+}
